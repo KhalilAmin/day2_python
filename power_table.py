@@ -6,10 +6,20 @@ while replay == "y":
     print("{:<10} {:<10} {:<10}".format("Number", "Squared", "Cubed"))
     print("{:<10} {:<10} {:<10}".format(divder, divder, divder))
     for i in range(num):
-        print("{:<10} {:<10} {:<10}".format(i +1, i**2 +1, i**3 +1))
-    print("----------")
-    for x in range(1, num+1):
-        for y in range(1, num+1):
-            print(f'{x*y}', end=" ")
+        print("{:<10} {:<10} {:<10}".format(i+1, (i+1)**2, (i+1)**3))
+
+    for i in range(1, num + 1):
+        print(f"\t{i:3d}", end="")
+    print()
+
+    for i in range(1, num + 1):
+        print(f'\t''  =', end="")
+    print()
+
+    for i in range(1, num + 1):
+        print(f"{i} |", end="")
+        for j in range(1, num + 1):
+            result = i * j
+            print(f" {result:3d}", end="")
         print()
     replay = input("Continue? (y/n): ")
